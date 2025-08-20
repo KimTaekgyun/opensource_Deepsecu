@@ -1,0 +1,16 @@
+filebeat.inputs:
+  - type: filestream
+    enabled: true
+    paths:
+      - /home/computer/AI_Model/final.json
+    json.keys_under_root: true
+    json.add_error_key: true
+    json.overwrite_keys: true
+
+# 실제 JSON 필드가 Elasticsearch에 개별 필드로 저장되도록
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "deeplearning-logs-%{+yyyy.MM.dd}"
+
+# 템플릿 비활성화 (원하면 true로 바꿔도 됨)
+setup.template.enabled: false
