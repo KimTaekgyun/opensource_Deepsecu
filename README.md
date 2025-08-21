@@ -65,5 +65,4 @@ Suricata IDS와 Python을 활용한 보안 자동화 시스템
 
 
 ## 라이선스
-
-본 프로젝트는 MIT License를 따릅니다.
+본 프로젝트는 [MIT License](./LICENSE)를 따릅니다.
